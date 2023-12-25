@@ -4,7 +4,6 @@ terraform {
      # Can change from "local" to "gcs" (for google) or "s3" (for aws), if you would like to preserve your tf-state online
      backend "local" {}
   required_providers {
-    required_providers {
         google = {
             source = "hashicorp/google"
         }
@@ -38,17 +37,18 @@ resource "google_storage_bucket" "data-lake-bucket" {
         condition {
             age = 30 // days
         }
-
-        force_destroy = true
     }
+        force_destroy = true
 }
-
 # DWH
 # Ref: https://registry.terraform.io/providers/hashicorp/google/latest/docs/resources/bigquery_dataset
 resource "google_bigquery_dataset" "dataset" {
-    dataset_id  = var.BQ.dataset
+    dataset_id  = var.BQ_DATASET
     project     = var.project 
     location    = var.region
 }
 
-}
+
+
+
+
