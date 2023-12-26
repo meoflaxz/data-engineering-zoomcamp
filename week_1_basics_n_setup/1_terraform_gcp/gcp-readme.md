@@ -6,8 +6,7 @@
 
 * #### Let's say you want to create VM first (or any other instance you want). So next thing you do is configuring the ssh key to access it.
 
-* #### Before that, create <code>.ssh</code> directory to store the key credentials. This can be anywhere and please put it in <code>.gitignore</code> files. **IMPORTANT**
-
+* #### Before that, go to the <code>.ssh</code> directory. This will be under <code>C:\Users\HOST\.ssh></code>.
 * #### In this directory, write below syntax vvvvv
 
 <br> 
