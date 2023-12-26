@@ -6,7 +6,9 @@
 
 #### - Let's say you want to create VM first (or any other instance you want). So next thing you do is configuring the ssh key to access it.
 
-#### - You need to remember this sytax <code>ssh-keygen -t rsa -f ~/.ssh/KEY_FILENAME -C USERNAME -b 2048</code> to create the key. Explanation is as below.
+#### - Before that, create <code>.ssh</code> directory to store the key credentials. This can be anywhere and please put it in <code>.gitignore</code> files. **IMPORTANT**
+
+#### - In this directory, write below syntax vvvvv
 
 <br> 
 
