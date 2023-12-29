@@ -9,15 +9,24 @@ terraform {
     }
 }
 
+provider "google" {
+  project = "praxis-bond-408912"
+  region  = "asia-southeast1"
+  zone    = "asia-southeast1-a"
+}
+
+
 resource "google_bigquery_dataset" "dataset" {
     dataset_id                  = "example_dataset"
     description                 = "This is a test description"
     location                    = "US"
 }
 
+# terraform import google_storage_bucket.bucket praxis-bond-408912/bucket-test124
 resource "google_storage_bucket" "bucket" {
     name                        = "bucket-test124"
-    table_id                    = "US"
+    project                     = "praxis-bond-408912"
+    location                    = "US"
 }
 
 resource "google_bigquery_table" "table" {
@@ -30,7 +39,8 @@ resource "google_bigquery_table" "table" {
         source_uris             = ["gs://${google_storage_bucket.bucket.name}/*.csv"]
 
         csv_options {
-            encoding            "UTF-8"
+            encoding            = "UTF-8"
+            quote               = ""
         }
     }
 
@@ -49,19 +59,19 @@ resource "google_bigquery_table" "table" {
             "description": "State"  
         },
         {
-            "name": "Mean Income (RM)",
+            "name": "Mean Income RM",
             "type": "STRING",
             "mode": "NULLABLE",
             "description": "Mean of income in RM" 
         },
         {
-            "name": "Median Income (RM)",
+            "name": "Median Income RM",
             "type": "STRING",
             "mode": "NULLABLE",
             "description": "Median of income in RM"
         },
         {
-            "name": "Mean Expenditure (RM)",
+            "name": "Mean Expenditure RM",
             "type": "STRING",
             "mode": "NULLABLE",
             "description": "Mean of expenditure in RM"            
@@ -73,10 +83,11 @@ resource "google_bigquery_table" "table" {
             "description": "Coefficient of Gini"            
         },
         {
-            "name": "Poverty Rate (%)",
+            "name": "Poverty Rate",
             "type": "STRING",
             "mode": "NULLABLE",
             "description": "Rate poverty"             
         }
-    ]EOF
+    ]
+EOF
 }
