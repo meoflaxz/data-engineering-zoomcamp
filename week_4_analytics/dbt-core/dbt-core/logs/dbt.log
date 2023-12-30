@@ -1,0 +1,111 @@
+[0m15:21:42.084571 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000025920399610>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002591FBA4E20>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002591FBA4DC0>]}
+
+
+============================== 15:21:42.091498 | 507cb30b-acb6-4c3c-9b55-3514278bbd3c ==============================
+[0m15:21:42.091498 [info ] [MainThread]: Running with dbt=1.7.4
+[0m15:21:42.091498 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'version_check': 'True', 'profiles_dir': 'C:\\Users\\meorh\\.dbt', 'log_path': 'logs', 'fail_fast': 'False', 'debug': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'static_parser': 'True', 'introspect': 'True', 'invocation_command': 'dbt init', 'target_path': 'None', 'log_format': 'default', 'send_anonymous_usage_stats': 'True'}
+[0m15:21:42.091498 [warn ] [MainThread]: [ConfigFolderDirectory]: Unable to parse dict {'dir': WindowsPath('C:/Users/meorh/.dbt')}
+[0m15:21:42.097509 [info ] [MainThread]: Creating dbt configuration folder at 
+[0m15:22:11.783181 [error] [MainThread]: Encountered an error:
+
+[0m15:22:11.783181 [error] [MainThread]: Traceback (most recent call last):
+  File "c:\users\meorh\desktop\data science\project\data-engineer\data-engineering-zoomcamp\week_4_analytics\dbt-core\dbt-core\lib\site-packages\dbt\cli\requires.py", line 90, in wrapper
+    result, success = func(*args, **kwargs)
+  File "c:\users\meorh\desktop\data science\project\data-engineer\data-engineering-zoomcamp\week_4_analytics\dbt-core\dbt-core\lib\site-packages\dbt\cli\requires.py", line 75, in wrapper
+    return func(*args, **kwargs)
+  File "c:\users\meorh\desktop\data science\project\data-engineer\data-engineering-zoomcamp\week_4_analytics\dbt-core\dbt-core\lib\site-packages\dbt\cli\main.py", line 515, in init
+    results = task.run()
+  File "c:\users\meorh\desktop\data science\project\data-engineer\data-engineering-zoomcamp\week_4_analytics\dbt-core\dbt-core\lib\site-packages\dbt\task\init.py", line 322, in run
+    project_name = self.get_valid_project_name()
+  File "c:\users\meorh\desktop\data science\project\data-engineer\data-engineering-zoomcamp\week_4_analytics\dbt-core\dbt-core\lib\site-packages\dbt\task\init.py", line 276, in get_valid_project_name
+    name = click.prompt("Enter a name for your project (letters, digits, underscore)")
+  File "c:\users\meorh\desktop\data science\project\data-engineer\data-engineering-zoomcamp\week_4_analytics\dbt-core\dbt-core\lib\site-packages\click\termui.py", line 164, in prompt
+    value = prompt_func(prompt)
+  File "c:\users\meorh\desktop\data science\project\data-engineer\data-engineering-zoomcamp\week_4_analytics\dbt-core\dbt-core\lib\site-packages\click\termui.py", line 147, in prompt_func
+    raise Abort() from None
+click.exceptions.Abort
+
+[0m15:22:11.794390 [debug] [MainThread]: Command `dbt init` failed at 15:22:11.794390 after 29.71 seconds
+[0m15:22:11.799231 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000025920399610>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002591FBB60D0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002591FBB6FD0>]}
+[0m15:22:11.799231 [debug] [MainThread]: Flushing usage events
+[0m15:22:27.346502 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002734D401C70>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002734CC16DC0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002734CC16CA0>]}
+
+
+============================== 15:22:27.346502 | b7e7a52a-23a7-44b3-b8a9-ab9113a0b54e ==============================
+[0m15:22:27.346502 [info ] [MainThread]: Running with dbt=1.7.4
+[0m15:22:27.362175 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'fail_fast': 'False', 'profiles_dir': 'C:\\Users\\meorh\\.dbt', 'log_path': 'logs', 'version_check': 'True', 'debug': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'static_parser': 'True', 'invocation_command': 'dbt init dbt-core', 'introspect': 'True', 'target_path': 'None', 'log_format': 'default', 'send_anonymous_usage_stats': 'True'}
+[0m15:22:39.204856 [error] [MainThread]: Encountered an error:
+
+[0m15:22:39.208477 [error] [MainThread]: Traceback (most recent call last):
+  File "c:\users\meorh\desktop\data science\project\data-engineer\data-engineering-zoomcamp\week_4_analytics\dbt-core\dbt-core\lib\site-packages\dbt\cli\requires.py", line 90, in wrapper
+    result, success = func(*args, **kwargs)
+  File "c:\users\meorh\desktop\data science\project\data-engineer\data-engineering-zoomcamp\week_4_analytics\dbt-core\dbt-core\lib\site-packages\dbt\cli\requires.py", line 75, in wrapper
+    return func(*args, **kwargs)
+  File "c:\users\meorh\desktop\data science\project\data-engineer\data-engineering-zoomcamp\week_4_analytics\dbt-core\dbt-core\lib\site-packages\dbt\cli\main.py", line 515, in init
+    results = task.run()
+  File "c:\users\meorh\desktop\data science\project\data-engineer\data-engineering-zoomcamp\week_4_analytics\dbt-core\dbt-core\lib\site-packages\dbt\task\init.py", line 322, in run
+    project_name = self.get_valid_project_name()
+  File "c:\users\meorh\desktop\data science\project\data-engineer\data-engineering-zoomcamp\week_4_analytics\dbt-core\dbt-core\lib\site-packages\dbt\task\init.py", line 276, in get_valid_project_name
+    name = click.prompt("Enter a name for your project (letters, digits, underscore)")
+  File "c:\users\meorh\desktop\data science\project\data-engineer\data-engineering-zoomcamp\week_4_analytics\dbt-core\dbt-core\lib\site-packages\click\termui.py", line 164, in prompt
+    value = prompt_func(prompt)
+  File "c:\users\meorh\desktop\data science\project\data-engineer\data-engineering-zoomcamp\week_4_analytics\dbt-core\dbt-core\lib\site-packages\click\termui.py", line 147, in prompt_func
+    raise Abort() from None
+click.exceptions.Abort
+
+[0m15:22:39.225301 [debug] [MainThread]: Command `dbt init` failed at 15:22:39.225301 after 11.87 seconds
+[0m15:22:39.225301 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002734D401C70>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002734934E790>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002734CC28F70>]}
+[0m15:22:39.230092 [debug] [MainThread]: Flushing usage events
+[0m15:24:28.459211 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001ED861669A0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001ED85977DF0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001ED85977CD0>]}
+
+
+============================== 15:24:28.459211 | 2607d920-c865-41f7-b103-4c238b938b72 ==============================
+[0m15:24:28.459211 [info ] [MainThread]: Running with dbt=1.7.4
+[0m15:24:28.459211 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': 'C:\\Users\\meorh\\.dbt', 'fail_fast': 'False', 'version_check': 'True', 'log_path': 'logs', 'warn_error': 'None', 'debug': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'log_format': 'default', 'invocation_command': 'dbt init dbt-core', 'introspect': 'True', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'target_path': 'None', 'static_parser': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m15:24:38.197713 [error] [MainThread]: Encountered an error:
+
+[0m15:24:38.202259 [error] [MainThread]: Traceback (most recent call last):
+  File "c:\users\meorh\desktop\data science\project\data-engineer\data-engineering-zoomcamp\week_4_analytics\dbt-core\dbt-core\lib\site-packages\dbt\cli\requires.py", line 90, in wrapper
+    result, success = func(*args, **kwargs)
+  File "c:\users\meorh\desktop\data science\project\data-engineer\data-engineering-zoomcamp\week_4_analytics\dbt-core\dbt-core\lib\site-packages\dbt\cli\requires.py", line 75, in wrapper
+    return func(*args, **kwargs)
+  File "c:\users\meorh\desktop\data science\project\data-engineer\data-engineering-zoomcamp\week_4_analytics\dbt-core\dbt-core\lib\site-packages\dbt\cli\main.py", line 515, in init
+    results = task.run()
+  File "c:\users\meorh\desktop\data science\project\data-engineer\data-engineering-zoomcamp\week_4_analytics\dbt-core\dbt-core\lib\site-packages\dbt\task\init.py", line 322, in run
+    project_name = self.get_valid_project_name()
+  File "c:\users\meorh\desktop\data science\project\data-engineer\data-engineering-zoomcamp\week_4_analytics\dbt-core\dbt-core\lib\site-packages\dbt\task\init.py", line 276, in get_valid_project_name
+    name = click.prompt("Enter a name for your project (letters, digits, underscore)")
+  File "c:\users\meorh\desktop\data science\project\data-engineer\data-engineering-zoomcamp\week_4_analytics\dbt-core\dbt-core\lib\site-packages\click\termui.py", line 164, in prompt
+    value = prompt_func(prompt)
+  File "c:\users\meorh\desktop\data science\project\data-engineer\data-engineering-zoomcamp\week_4_analytics\dbt-core\dbt-core\lib\site-packages\click\termui.py", line 147, in prompt_func
+    raise Abort() from None
+click.exceptions.Abort
+
+[0m15:24:38.211609 [debug] [MainThread]: Command `dbt init` failed at 15:24:38.211609 after 9.75 seconds
+[0m15:24:38.211609 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001ED861669A0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001ED820BE790>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001ED85988490>]}
+[0m15:24:38.216364 [debug] [MainThread]: Flushing usage events
+[0m15:24:48.338730 [debug] [MainThread]: Error sending anonymous usage statistics. Disabling tracking for this execution. If you wish to permanently disable tracking, see: https://docs.getdbt.com/reference/global-configs#send-anonymous-usage-stats.
+[0m15:25:42.096598 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001DC97681160>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001DC96E95D90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001DC96E95C70>]}
+
+
+============================== 15:25:42.096598 | 5cc4962f-9d51-422c-af31-314468742f8c ==============================
+[0m15:25:42.096598 [info ] [MainThread]: Running with dbt=1.7.4
+[0m15:25:42.096598 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': 'C:\\Users\\meorh\\.dbt', 'version_check': 'True', 'fail_fast': 'False', 'log_path': 'logs', 'debug': 'False', 'warn_error': 'None', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'introspect': 'True', 'invocation_command': 'dbt init dbt_core', 'static_parser': 'True', 'target_path': 'None', 'log_format': 'default', 'send_anonymous_usage_stats': 'True'}
+[0m15:25:42.096598 [debug] [MainThread]: Starter project path: c:\users\meorh\desktop\data science\project\data-engineer\data-engineering-zoomcamp\week_4_analytics\dbt-core\dbt-core\lib\site-packages\dbt\include\starter_project
+[0m15:25:42.199498 [info ] [MainThread]: 
+Your new dbt project "dbt_core" was created!
+
+For more information on how to configure the profiles.yml file,
+please consult the dbt documentation here:
+
+  https://docs.getdbt.com/docs/configure-your-profile
+
+One more thing:
+
+Need help? Don't hesitate to reach out to us via GitHub issues or on Slack:
+
+  https://community.getdbt.com/
+
+Happy modeling!
+
+[0m15:25:42.199498 [info ] [MainThread]: Setting up your profile.
