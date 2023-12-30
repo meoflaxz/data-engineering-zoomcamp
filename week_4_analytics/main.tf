@@ -33,16 +33,16 @@ resource "google_bigquery_table" "table" {
     dataset_id                  = google_bigquery_dataset.dataset.dataset_id
     table_id                    = "example_table"
 
-    external_data_configuration {
-        autodetect              = true
-        source_format           = "CSV"
-        source_uris             = ["gs://${google_storage_bucket.bucket.name}/*.csv"]
+    # external_data_configuration {
+    #     autodetect              = true
+    #     source_format           = "CSV"
+    #     source_uris             = ["gs://${google_storage_bucket.bucket.name}/*.csv"]
 
-        csv_options {
-            encoding            = "UTF-8"
-            quote               = ""
-        }
-    }
+    #     csv_options {
+    #         encoding            = "UTF-8"
+    #         quote               = ""
+    #     }
+    # }
 
     schema = <<EOF
     [
