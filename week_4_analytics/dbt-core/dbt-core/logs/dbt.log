@@ -109,3 +109,269 @@ Need help? Don't hesitate to reach out to us via GitHub issues or on Slack:
 Happy modeling!
 
 [0m15:25:42.199498 [info ] [MainThread]: Setting up your profile.
+[0m20:19:44.938816 [error] [MainThread]: Encountered an error:
+
+[0m20:19:45.036404 [error] [MainThread]: Traceback (most recent call last):
+  File "c:\users\meorh\desktop\data science\project\data-engineer\data-engineering-zoomcamp\week_4_analytics\dbt-core\dbt-core\lib\site-packages\dbt\cli\requires.py", line 90, in wrapper
+    result, success = func(*args, **kwargs)
+  File "c:\users\meorh\desktop\data science\project\data-engineer\data-engineering-zoomcamp\week_4_analytics\dbt-core\dbt-core\lib\site-packages\dbt\cli\requires.py", line 75, in wrapper
+    return func(*args, **kwargs)
+  File "c:\users\meorh\desktop\data science\project\data-engineer\data-engineering-zoomcamp\week_4_analytics\dbt-core\dbt-core\lib\site-packages\dbt\cli\main.py", line 515, in init
+    results = task.run()
+  File "c:\users\meorh\desktop\data science\project\data-engineer\data-engineering-zoomcamp\week_4_analytics\dbt-core\dbt-core\lib\site-packages\dbt\task\init.py", line 344, in run
+    self.setup_profile(profile_name)
+  File "c:\users\meorh\desktop\data science\project\data-engineer\data-engineering-zoomcamp\week_4_analytics\dbt-core\dbt-core\lib\site-packages\dbt\task\init.py", line 264, in setup_profile
+    self.create_profile_from_target(adapter, profile_name=profile_name)
+  File "c:\users\meorh\desktop\data science\project\data-engineer\data-engineering-zoomcamp\week_4_analytics\dbt-core\dbt-core\lib\site-packages\dbt\task\init.py", line 181, in create_profile_from_target
+    self.create_profile_from_profile_template(profile_template, profile_name)
+  File "c:\users\meorh\desktop\data science\project\data-engineer\data-engineering-zoomcamp\week_4_analytics\dbt-core\dbt-core\lib\site-packages\dbt\task\init.py", line 165, in create_profile_from_profile_template
+    target = self.generate_target_from_input(prompts, initial_target)
+  File "c:\users\meorh\desktop\data science\project\data-engineer\data-engineering-zoomcamp\week_4_analytics\dbt-core\dbt-core\lib\site-packages\dbt\task\init.py", line 131, in generate_target_from_input
+    target[key] = click.prompt(
+  File "c:\users\meorh\desktop\data science\project\data-engineer\data-engineering-zoomcamp\week_4_analytics\dbt-core\dbt-core\lib\site-packages\click\termui.py", line 164, in prompt
+    value = prompt_func(prompt)
+  File "c:\users\meorh\desktop\data science\project\data-engineer\data-engineering-zoomcamp\week_4_analytics\dbt-core\dbt-core\lib\site-packages\click\termui.py", line 147, in prompt_func
+    raise Abort() from None
+click.exceptions.Abort
+
+[0m20:19:45.081691 [debug] [MainThread]: Command `dbt init` failed at 20:19:45.076715 after 17642.99 seconds
+[0m20:19:45.094365 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001DC97681160>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001DC9AEE3190>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001DC9AEE3A30>]}
+[0m20:19:45.096533 [debug] [MainThread]: Flushing usage events
+[0m20:19:45.206605 [debug] [MainThread]: Error sending anonymous usage statistics. Disabling tracking for this execution. If you wish to permanently disable tracking, see: https://docs.getdbt.com/reference/global-configs#send-anonymous-usage-stats.
+[0m20:20:13.660492 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000277F8D58250>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000277F8577FA0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000277F8577340>]}
+
+
+============================== 20:20:13.666532 | 34beec5c-ea83-4f78-b309-338a503b7b2e ==============================
+[0m20:20:13.666532 [info ] [MainThread]: Running with dbt=1.7.4
+[0m20:20:13.672522 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': 'C:\\Users\\meorh\\.dbt', 'version_check': 'True', 'warn_error': 'None', 'log_path': 'logs', 'fail_fast': 'False', 'debug': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'log_format': 'default', 'static_parser': 'True', 'invocation_command': 'dbt debug', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'target_path': 'None', 'introspect': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m20:20:13.673823 [info ] [MainThread]: dbt version: 1.7.4
+[0m20:20:13.676402 [info ] [MainThread]: python version: 3.9.0
+[0m20:20:13.676523 [info ] [MainThread]: python path: c:\users\meorh\desktop\data science\project\data-engineer\data-engineering-zoomcamp\week_4_analytics\dbt-core\dbt-core\scripts\python.exe
+[0m20:20:13.676523 [info ] [MainThread]: os info: Windows-10-10.0.22621-SP0
+[0m20:20:14.846246 [info ] [MainThread]: Using profiles dir at C:\Users\meorh\.dbt
+[0m20:20:14.846246 [info ] [MainThread]: Using profiles.yml file at C:\Users\meorh\.dbt\profiles.yml
+[0m20:20:14.846246 [info ] [MainThread]: Using dbt_project.yml file at C:\Users\meorh\Desktop\Data Science\Project\data-engineer\data-engineering-zoomcamp\week_4_analytics\dbt-core\dbt-core\dbt_project.yml
+[0m20:20:14.846246 [info ] [MainThread]: adapter type: bigquery
+[0m20:20:14.846246 [info ] [MainThread]: adapter version: 1.7.2
+[0m20:20:14.846246 [info ] [MainThread]: Configuration:
+[0m20:20:14.853713 [info ] [MainThread]:   profiles.yml file [[32mOK found and valid[0m]
+[0m20:20:14.853713 [info ] [MainThread]:   dbt_project.yml file [[31mERROR not found[0m]
+[0m20:20:14.856365 [info ] [MainThread]: Required dependencies:
+[0m20:20:14.856365 [debug] [MainThread]: Executing "git --help"
+[0m20:20:14.926163 [debug] [MainThread]: STDOUT: "b"usage: git [-v | --version] [-h | --help] [-C <path>] [-c <name>=<value>]\n           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--bare]\n           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]\n           [--config-env=<name>=<envvar>] <command> [<args>]\n\nThese are common Git commands used in various situations:\n\nstart a working area (see also: git help tutorial)\n   clone     Clone a repository into a new directory\n   init      Create an empty Git repository or reinitialize an existing one\n\nwork on the current change (see also: git help everyday)\n   add       Add file contents to the index\n   mv        Move or rename a file, a directory, or a symlink\n   restore   Restore working tree files\n   rm        Remove files from the working tree and from the index\n\nexamine the history and state (see also: git help revisions)\n   bisect    Use binary search to find the commit that introduced a bug\n   diff      Show changes between commits, commit and working tree, etc\n   grep      Print lines matching a pattern\n   log       Show commit logs\n   show      Show various types of objects\n   status    Show the working tree status\n\ngrow, mark and tweak your common history\n   branch    List, create, or delete branches\n   commit    Record changes to the repository\n   merge     Join two or more development histories together\n   rebase    Reapply commits on top of another base tip\n   reset     Reset current HEAD to the specified state\n   switch    Switch branches\n   tag       Create, list, delete or verify a tag object signed with GPG\n\ncollaborate (see also: git help workflows)\n   fetch     Download objects and refs from another repository\n   pull      Fetch from and integrate with another repository or a local branch\n   push      Update remote refs along with associated objects\n\n'git help -a' and 'git help -g' list available subcommands and some\nconcept guides. See 'git help <command>' or 'git help <concept>'\nto read about a specific subcommand or concept.\nSee 'git help git' for an overview of the system.\n""
+[0m20:20:14.926163 [debug] [MainThread]: STDERR: "b''"
+[0m20:20:14.926163 [info ] [MainThread]:  - git [[32mOK found[0m]
+
+[0m20:20:14.926163 [info ] [MainThread]: Connection:
+[0m20:20:14.926163 [info ] [MainThread]:   method: service-account
+[0m20:20:14.926163 [info ] [MainThread]:   database: praxis-bond-408912
+[0m20:20:14.932696 [info ] [MainThread]:   execution_project: praxis-bond-408912
+[0m20:20:14.932696 [info ] [MainThread]:   schema: Testing
+[0m20:20:14.932696 [info ] [MainThread]:   location: US
+[0m20:20:14.936209 [info ] [MainThread]:   priority: interactive
+[0m20:20:14.936314 [info ] [MainThread]:   maximum_bytes_billed: None
+[0m20:20:14.936314 [info ] [MainThread]:   impersonate_service_account: None
+[0m20:20:14.939315 [info ] [MainThread]:   job_retry_deadline_seconds: None
+[0m20:20:14.940829 [info ] [MainThread]:   job_retries: 1
+[0m20:20:14.940829 [info ] [MainThread]:   job_creation_timeout_seconds: None
+[0m20:20:14.940829 [info ] [MainThread]:   job_execution_timeout_seconds: 300
+[0m20:20:14.940829 [info ] [MainThread]:   keyfile: C:\Users\meorh\Downloads\praxis-bond-408912-5a775d0e131f.json
+[0m20:20:14.940829 [info ] [MainThread]:   timeout_seconds: 300
+[0m20:20:14.946358 [info ] [MainThread]:   refresh_token: None
+[0m20:20:14.946358 [info ] [MainThread]:   client_id: None
+[0m20:20:14.946358 [info ] [MainThread]:   token_uri: None
+[0m20:20:14.946358 [info ] [MainThread]:   dataproc_region: None
+[0m20:20:14.946358 [info ] [MainThread]:   dataproc_cluster_name: None
+[0m20:20:14.946358 [info ] [MainThread]:   gcs_bucket: None
+[0m20:20:14.946358 [info ] [MainThread]:   dataproc_batch: None
+[0m20:20:14.946358 [info ] [MainThread]: Registered adapter: bigquery=1.7.2
+[0m20:20:14.956544 [debug] [MainThread]: Acquiring new bigquery connection 'debug'
+[0m20:20:14.956544 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m20:20:14.959867 [debug] [MainThread]: On debug: select 1 as id
+[0m20:21:46.258913 [error] [MainThread]: Encountered an error:
+
+[0m20:21:46.278877 [error] [MainThread]: Traceback (most recent call last):
+  File "c:\users\meorh\desktop\data science\project\data-engineer\data-engineering-zoomcamp\week_4_analytics\dbt-core\dbt-core\lib\site-packages\dbt\cli\requires.py", line 90, in wrapper
+    result, success = func(*args, **kwargs)
+  File "c:\users\meorh\desktop\data science\project\data-engineer\data-engineering-zoomcamp\week_4_analytics\dbt-core\dbt-core\lib\site-packages\dbt\cli\requires.py", line 75, in wrapper
+    return func(*args, **kwargs)
+  File "c:\users\meorh\desktop\data science\project\data-engineer\data-engineering-zoomcamp\week_4_analytics\dbt-core\dbt-core\lib\site-packages\dbt\cli\main.py", line 444, in debug
+    results = task.run()
+  File "c:\users\meorh\desktop\data science\project\data-engineer\data-engineering-zoomcamp\week_4_analytics\dbt-core\dbt-core\lib\site-packages\dbt\task\debug.py", line 153, in run
+    connection_status = self.test_connection()
+  File "c:\users\meorh\desktop\data science\project\data-engineer\data-engineering-zoomcamp\week_4_analytics\dbt-core\dbt-core\lib\site-packages\dbt\task\debug.py", line 472, in test_connection
+    connection_result = self.attempt_connection(self.profile)
+  File "c:\users\meorh\desktop\data science\project\data-engineer\data-engineering-zoomcamp\week_4_analytics\dbt-core\dbt-core\lib\site-packages\dbt\task\debug.py", line 450, in attempt_connection
+    adapter.debug_query()
+  File "c:\users\meorh\desktop\data science\project\data-engineer\data-engineering-zoomcamp\week_4_analytics\dbt-core\dbt-core\lib\site-packages\dbt\adapters\bigquery\impl.py", line 922, in debug_query
+    self.execute("select 1 as id")
+  File "c:\users\meorh\desktop\data science\project\data-engineer\data-engineering-zoomcamp\week_4_analytics\dbt-core\dbt-core\lib\site-packages\dbt\adapters\base\impl.py", line 310, in execute
+    return self.connections.execute(sql=sql, auto_begin=auto_begin, fetch=fetch, limit=limit)
+  File "c:\users\meorh\desktop\data science\project\data-engineer\data-engineering-zoomcamp\week_4_analytics\dbt-core\dbt-core\lib\site-packages\dbt\adapters\bigquery\connections.py", line 514, in execute
+    query_job, iterator = self.raw_execute(sql, limit=limit)
+  File "c:\users\meorh\desktop\data science\project\data-engineer\data-engineering-zoomcamp\week_4_analytics\dbt-core\dbt-core\lib\site-packages\dbt\adapters\bigquery\connections.py", line 505, in raw_execute
+    query_job, iterator = self._retry_and_handle(msg=sql, conn=conn, fn=fn)
+  File "c:\users\meorh\desktop\data science\project\data-engineer\data-engineering-zoomcamp\week_4_analytics\dbt-core\dbt-core\lib\site-packages\dbt\adapters\bigquery\connections.py", line 786, in _retry_and_handle
+    return retry.retry_target(
+  File "c:\users\meorh\desktop\data science\project\data-engineer\data-engineering-zoomcamp\week_4_analytics\dbt-core\dbt-core\lib\site-packages\google\api_core\retry.py", line 207, in retry_target
+    result = target()
+  File "c:\users\meorh\desktop\data science\project\data-engineer\data-engineering-zoomcamp\week_4_analytics\dbt-core\dbt-core\lib\site-packages\dbt\adapters\bigquery\connections.py", line 496, in fn
+    return self._query_and_results(
+  File "c:\users\meorh\desktop\data science\project\data-engineer\data-engineering-zoomcamp\week_4_analytics\dbt-core\dbt-core\lib\site-packages\dbt\adapters\bigquery\connections.py", line 744, in _query_and_results
+    query_job = client.query(query=sql, job_config=job_config, timeout=job_creation_timeout)
+  File "c:\users\meorh\desktop\data science\project\data-engineer\data-engineering-zoomcamp\week_4_analytics\dbt-core\dbt-core\lib\site-packages\google\cloud\bigquery\client.py", line 3387, in query
+    return _job_helpers.query_jobs_insert(
+  File "c:\users\meorh\desktop\data science\project\data-engineer\data-engineering-zoomcamp\week_4_analytics\dbt-core\dbt-core\lib\site-packages\google\cloud\bigquery\_job_helpers.py", line 158, in query_jobs_insert
+    future = do_query()
+  File "c:\users\meorh\desktop\data science\project\data-engineer\data-engineering-zoomcamp\week_4_analytics\dbt-core\dbt-core\lib\site-packages\google\cloud\bigquery\_job_helpers.py", line 135, in do_query
+    query_job._begin(retry=retry, timeout=timeout)
+  File "c:\users\meorh\desktop\data science\project\data-engineer\data-engineering-zoomcamp\week_4_analytics\dbt-core\dbt-core\lib\site-packages\google\cloud\bigquery\job\query.py", line 1379, in _begin
+    super(QueryJob, self)._begin(client=client, retry=retry, timeout=timeout)
+  File "c:\users\meorh\desktop\data science\project\data-engineer\data-engineering-zoomcamp\week_4_analytics\dbt-core\dbt-core\lib\site-packages\google\cloud\bigquery\job\base.py", line 723, in _begin
+    api_response = client._call_api(
+  File "c:\users\meorh\desktop\data science\project\data-engineer\data-engineering-zoomcamp\week_4_analytics\dbt-core\dbt-core\lib\site-packages\google\cloud\bigquery\client.py", line 818, in _call_api
+    return call()
+  File "c:\users\meorh\desktop\data science\project\data-engineer\data-engineering-zoomcamp\week_4_analytics\dbt-core\dbt-core\lib\site-packages\google\api_core\retry.py", line 372, in retry_wrapped_func
+    return retry_target(
+  File "c:\users\meorh\desktop\data science\project\data-engineer\data-engineering-zoomcamp\week_4_analytics\dbt-core\dbt-core\lib\site-packages\google\api_core\retry.py", line 236, in retry_target
+    time.sleep(sleep)
+KeyboardInterrupt
+
+[0m20:21:46.289074 [debug] [MainThread]: Command `dbt debug` failed at 20:21:46.289074 after 92.71 seconds
+[0m20:21:46.289074 [debug] [MainThread]: Connection 'debug' was properly closed.
+[0m20:21:46.289074 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000277F8D58250>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000277FC690C40>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000277FC7122B0>]}
+[0m20:21:46.289074 [debug] [MainThread]: Flushing usage events
+[0m20:21:46.298786 [debug] [MainThread]: Error sending anonymous usage statistics. Disabling tracking for this execution. If you wish to permanently disable tracking, see: https://docs.getdbt.com/reference/global-configs#send-anonymous-usage-stats.
+[0m20:21:56.858812 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000023883D61250>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000238835879D0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000023883587FA0>]}
+
+
+============================== 20:21:56.868738 | d637a27c-5563-4cb7-97f9-d57737be10ea ==============================
+[0m20:21:56.868738 [info ] [MainThread]: Running with dbt=1.7.4
+[0m20:21:56.868738 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': 'C:\\Users\\meorh\\.dbt', 'fail_fast': 'False', 'version_check': 'True', 'log_path': 'logs', 'warn_error': 'None', 'debug': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'log_format': 'default', 'introspect': 'True', 'static_parser': 'True', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'target_path': 'None', 'invocation_command': 'dbt init dbt_core', 'send_anonymous_usage_stats': 'True'}
+[0m20:21:56.875432 [info ] [MainThread]: A project called dbt_core already exists here.
+[0m20:21:56.878948 [debug] [MainThread]: Command `dbt init` succeeded at 20:21:56.878948 after 0.11 seconds
+[0m20:21:56.878948 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000023883D61250>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000023883587FA0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000238835876A0>]}
+[0m20:21:56.878948 [debug] [MainThread]: Flushing usage events
+[0m20:21:56.892151 [debug] [MainThread]: Error sending anonymous usage statistics. Disabling tracking for this execution. If you wish to permanently disable tracking, see: https://docs.getdbt.com/reference/global-configs#send-anonymous-usage-stats.
+[0m20:22:23.298859 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000029E6F3199A0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000029E6EB50100>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000029E6EB503A0>]}
+
+
+============================== 20:22:23.298859 | 53bd0163-aaaa-4ae4-8cb5-c37462413224 ==============================
+[0m20:22:23.298859 [info ] [MainThread]: Running with dbt=1.7.4
+[0m20:22:23.298859 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'version_check': 'True', 'fail_fast': 'False', 'log_path': 'logs', 'debug': 'False', 'profiles_dir': 'C:\\Users\\meorh\\.dbt', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'log_format': 'default', 'introspect': 'True', 'static_parser': 'True', 'invocation_command': 'dbt debug', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'send_anonymous_usage_stats': 'True'}
+[0m20:22:23.307177 [info ] [MainThread]: dbt version: 1.7.4
+[0m20:22:23.307177 [info ] [MainThread]: python version: 3.9.0
+[0m20:22:23.308749 [info ] [MainThread]: python path: c:\users\meorh\desktop\data science\project\data-engineer\data-engineering-zoomcamp\week_4_analytics\dbt-core\dbt-core\scripts\python.exe
+[0m20:22:23.308749 [info ] [MainThread]: os info: Windows-10-10.0.22621-SP0
+[0m20:22:24.065788 [info ] [MainThread]: Using profiles dir at C:\Users\meorh\.dbt
+[0m20:22:24.068805 [info ] [MainThread]: Using profiles.yml file at C:\Users\meorh\.dbt\profiles.yml
+[0m20:22:24.068805 [info ] [MainThread]: Using dbt_project.yml file at C:\Users\meorh\Desktop\Data Science\Project\data-engineer\data-engineering-zoomcamp\week_4_analytics\dbt-core\dbt-core\dbt_project.yml
+[0m20:22:24.071363 [info ] [MainThread]: adapter type: bigquery
+[0m20:22:24.071363 [info ] [MainThread]: adapter version: 1.7.2
+[0m20:22:24.071363 [info ] [MainThread]: Configuration:
+[0m20:22:24.071363 [info ] [MainThread]:   profiles.yml file [[32mOK found and valid[0m]
+[0m20:22:24.071363 [info ] [MainThread]:   dbt_project.yml file [[31mERROR not found[0m]
+[0m20:22:24.071363 [info ] [MainThread]: Required dependencies:
+[0m20:22:24.071363 [debug] [MainThread]: Executing "git --help"
+[0m20:22:24.129120 [debug] [MainThread]: STDOUT: "b"usage: git [-v | --version] [-h | --help] [-C <path>] [-c <name>=<value>]\n           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--bare]\n           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]\n           [--config-env=<name>=<envvar>] <command> [<args>]\n\nThese are common Git commands used in various situations:\n\nstart a working area (see also: git help tutorial)\n   clone     Clone a repository into a new directory\n   init      Create an empty Git repository or reinitialize an existing one\n\nwork on the current change (see also: git help everyday)\n   add       Add file contents to the index\n   mv        Move or rename a file, a directory, or a symlink\n   restore   Restore working tree files\n   rm        Remove files from the working tree and from the index\n\nexamine the history and state (see also: git help revisions)\n   bisect    Use binary search to find the commit that introduced a bug\n   diff      Show changes between commits, commit and working tree, etc\n   grep      Print lines matching a pattern\n   log       Show commit logs\n   show      Show various types of objects\n   status    Show the working tree status\n\ngrow, mark and tweak your common history\n   branch    List, create, or delete branches\n   commit    Record changes to the repository\n   merge     Join two or more development histories together\n   rebase    Reapply commits on top of another base tip\n   reset     Reset current HEAD to the specified state\n   switch    Switch branches\n   tag       Create, list, delete or verify a tag object signed with GPG\n\ncollaborate (see also: git help workflows)\n   fetch     Download objects and refs from another repository\n   pull      Fetch from and integrate with another repository or a local branch\n   push      Update remote refs along with associated objects\n\n'git help -a' and 'git help -g' list available subcommands and some\nconcept guides. See 'git help <command>' or 'git help <concept>'\nto read about a specific subcommand or concept.\nSee 'git help git' for an overview of the system.\n""
+[0m20:22:24.129120 [debug] [MainThread]: STDERR: "b''"
+[0m20:22:24.129120 [info ] [MainThread]:  - git [[32mOK found[0m]
+
+[0m20:22:24.133632 [info ] [MainThread]: Connection:
+[0m20:22:24.133739 [info ] [MainThread]:   method: service-account
+[0m20:22:24.133739 [info ] [MainThread]:   database: praxis-bond-408912
+[0m20:22:24.136832 [info ] [MainThread]:   execution_project: praxis-bond-408912
+[0m20:22:24.138843 [info ] [MainThread]:   schema: Testing
+[0m20:22:24.138843 [info ] [MainThread]:   location: US
+[0m20:22:24.138843 [info ] [MainThread]:   priority: interactive
+[0m20:22:24.138843 [info ] [MainThread]:   maximum_bytes_billed: None
+[0m20:22:24.138843 [info ] [MainThread]:   impersonate_service_account: None
+[0m20:22:24.145188 [info ] [MainThread]:   job_retry_deadline_seconds: None
+[0m20:22:24.145188 [info ] [MainThread]:   job_retries: 1
+[0m20:22:24.145188 [info ] [MainThread]:   job_creation_timeout_seconds: None
+[0m20:22:24.148702 [info ] [MainThread]:   job_execution_timeout_seconds: 300
+[0m20:22:24.148702 [info ] [MainThread]:   keyfile: C:\Users\meorh\Downloads\praxis-bond-408912-5a775d0e131f.json
+[0m20:22:24.148702 [info ] [MainThread]:   timeout_seconds: 300
+[0m20:22:24.148702 [info ] [MainThread]:   refresh_token: None
+[0m20:22:24.153679 [info ] [MainThread]:   client_id: None
+[0m20:22:24.153679 [info ] [MainThread]:   token_uri: None
+[0m20:22:24.153679 [info ] [MainThread]:   dataproc_region: None
+[0m20:22:24.153679 [info ] [MainThread]:   dataproc_cluster_name: None
+[0m20:22:24.158749 [info ] [MainThread]:   gcs_bucket: None
+[0m20:22:24.158749 [info ] [MainThread]:   dataproc_batch: None
+[0m20:22:24.158749 [info ] [MainThread]: Registered adapter: bigquery=1.7.2
+[0m20:22:24.161771 [debug] [MainThread]: Acquiring new bigquery connection 'debug'
+[0m20:22:24.161771 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m20:22:24.161771 [debug] [MainThread]: On debug: select 1 as id
+[0m22:33:13.375303 [debug] [MainThread]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=praxis-bond-408912&j=bq:US:9ac7ab27-ca42-4d95-aaa9-d6e63711bd85&page=queryresults
+[0m22:33:14.206794 [info ] [MainThread]:   Connection test: [[32mOK connection ok[0m]
+
+[0m22:33:14.206794 [info ] [MainThread]: [31m1 check failed:[0m
+[0m22:33:14.206794 [info ] [MainThread]: Project loading failed for the following reason:
+ project path <C:\Users\meorh\Desktop\Data Science\Project\data-engineer\data-engineering-zoomcamp\week_4_analytics\dbt-core\dbt-core\dbt_project.yml> not found
+
+[0m22:33:14.215211 [debug] [MainThread]: Command `dbt debug` failed at 22:33:14.214201 after 7850.99 seconds
+[0m22:33:14.215211 [debug] [MainThread]: Connection 'debug' was properly closed.
+[0m22:33:14.217474 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000029E6F3199A0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000029E6EB5E040>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000029E72C3E610>]}
+[0m22:33:14.218377 [debug] [MainThread]: Flushing usage events
+[0m23:28:28.610402 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000182C6D69250>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000182C6587970>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000182C6587FA0>]}
+
+
+============================== 23:28:28.614203 | 0532099f-7247-40ac-822f-d6ddacdcbdcf ==============================
+[0m23:28:28.614203 [info ] [MainThread]: Running with dbt=1.7.4
+[0m23:28:28.614203 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'fail_fast': 'False', 'profiles_dir': 'C:\\Users\\meorh\\.dbt', 'log_path': 'logs', 'debug': 'False', 'version_check': 'True', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'log_format': 'default', 'invocation_command': 'dbt debug', 'static_parser': 'True', 'introspect': 'True', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'send_anonymous_usage_stats': 'True'}
+[0m23:28:28.614203 [info ] [MainThread]: dbt version: 1.7.4
+[0m23:28:28.614203 [info ] [MainThread]: python version: 3.9.0
+[0m23:28:28.626219 [info ] [MainThread]: python path: c:\users\meorh\desktop\data science\project\data-engineer\data-engineering-zoomcamp\week_4_analytics\dbt-core\dbt-core\scripts\python.exe
+[0m23:28:28.628301 [info ] [MainThread]: os info: Windows-10-10.0.22621-SP0
+[0m23:28:29.616774 [info ] [MainThread]: Using profiles dir at C:\Users\meorh\.dbt
+[0m23:28:29.628887 [info ] [MainThread]: Using profiles.yml file at C:\Users\meorh\.dbt\profiles.yml
+[0m23:28:29.630605 [info ] [MainThread]: Using dbt_project.yml file at C:\Users\meorh\Desktop\Data Science\Project\data-engineer\data-engineering-zoomcamp\week_4_analytics\dbt-core\dbt-core\dbt_project.yml
+[0m23:28:29.632077 [info ] [MainThread]: adapter type: bigquery
+[0m23:28:29.634938 [info ] [MainThread]: adapter version: 1.7.2
+[0m23:28:29.636951 [info ] [MainThread]: Configuration:
+[0m23:28:29.636951 [info ] [MainThread]:   profiles.yml file [[32mOK found and valid[0m]
+[0m23:28:29.636951 [info ] [MainThread]:   dbt_project.yml file [[31mERROR not found[0m]
+[0m23:28:29.636951 [info ] [MainThread]: Required dependencies:
+[0m23:28:29.636951 [debug] [MainThread]: Executing "git --help"
+[0m23:28:29.708511 [debug] [MainThread]: STDOUT: "b"usage: git [-v | --version] [-h | --help] [-C <path>] [-c <name>=<value>]\n           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--bare]\n           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]\n           [--config-env=<name>=<envvar>] <command> [<args>]\n\nThese are common Git commands used in various situations:\n\nstart a working area (see also: git help tutorial)\n   clone     Clone a repository into a new directory\n   init      Create an empty Git repository or reinitialize an existing one\n\nwork on the current change (see also: git help everyday)\n   add       Add file contents to the index\n   mv        Move or rename a file, a directory, or a symlink\n   restore   Restore working tree files\n   rm        Remove files from the working tree and from the index\n\nexamine the history and state (see also: git help revisions)\n   bisect    Use binary search to find the commit that introduced a bug\n   diff      Show changes between commits, commit and working tree, etc\n   grep      Print lines matching a pattern\n   log       Show commit logs\n   show      Show various types of objects\n   status    Show the working tree status\n\ngrow, mark and tweak your common history\n   branch    List, create, or delete branches\n   commit    Record changes to the repository\n   merge     Join two or more development histories together\n   rebase    Reapply commits on top of another base tip\n   reset     Reset current HEAD to the specified state\n   switch    Switch branches\n   tag       Create, list, delete or verify a tag object signed with GPG\n\ncollaborate (see also: git help workflows)\n   fetch     Download objects and refs from another repository\n   pull      Fetch from and integrate with another repository or a local branch\n   push      Update remote refs along with associated objects\n\n'git help -a' and 'git help -g' list available subcommands and some\nconcept guides. See 'git help <command>' or 'git help <concept>'\nto read about a specific subcommand or concept.\nSee 'git help git' for an overview of the system.\n""
+[0m23:28:29.708511 [debug] [MainThread]: STDERR: "b''"
+[0m23:28:29.708511 [info ] [MainThread]:  - git [[32mOK found[0m]
+
+[0m23:28:29.711930 [info ] [MainThread]: Connection:
+[0m23:28:29.713480 [info ] [MainThread]:   method: service-account
+[0m23:28:29.713480 [info ] [MainThread]:   database: praxis-bond-408912
+[0m23:28:29.713480 [info ] [MainThread]:   execution_project: praxis-bond-408912
+[0m23:28:29.713480 [info ] [MainThread]:   schema: Testing
+[0m23:28:29.713480 [info ] [MainThread]:   location: US
+[0m23:28:29.713480 [info ] [MainThread]:   priority: interactive
+[0m23:28:29.713480 [info ] [MainThread]:   maximum_bytes_billed: None
+[0m23:28:29.724508 [info ] [MainThread]:   impersonate_service_account: None
+[0m23:28:29.724508 [info ] [MainThread]:   job_retry_deadline_seconds: None
+[0m23:28:29.724508 [info ] [MainThread]:   job_retries: 1
+[0m23:28:29.728653 [info ] [MainThread]:   job_creation_timeout_seconds: None
+[0m23:28:29.728653 [info ] [MainThread]:   job_execution_timeout_seconds: 300
+[0m23:28:29.732674 [info ] [MainThread]:   keyfile: C:\Users\meorh\Downloads\praxis-bond-408912-5a775d0e131f.json
+[0m23:28:29.732674 [info ] [MainThread]:   timeout_seconds: 300
+[0m23:28:29.732674 [info ] [MainThread]:   refresh_token: None
+[0m23:28:29.738549 [info ] [MainThread]:   client_id: None
+[0m23:28:29.738549 [info ] [MainThread]:   token_uri: None
+[0m23:28:29.738549 [info ] [MainThread]:   dataproc_region: None
+[0m23:28:29.738549 [info ] [MainThread]:   dataproc_cluster_name: None
+[0m23:28:29.745150 [info ] [MainThread]:   gcs_bucket: None
+[0m23:28:29.745150 [info ] [MainThread]:   dataproc_batch: None
+[0m23:28:29.745150 [info ] [MainThread]: Registered adapter: bigquery=1.7.2
+[0m23:28:29.753190 [debug] [MainThread]: Acquiring new bigquery connection 'debug'
+[0m23:28:29.753190 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m23:28:29.761981 [debug] [MainThread]: On debug: select 1 as id
+[0m23:28:30.743506 [debug] [MainThread]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=praxis-bond-408912&j=bq:US:f501eaf4-c881-4ec6-b6c2-c6f3d5f921e2&page=queryresults
+[0m23:28:31.564154 [info ] [MainThread]:   Connection test: [[32mOK connection ok[0m]
+
+[0m23:28:31.564154 [info ] [MainThread]: [31m1 check failed:[0m
+[0m23:28:31.573169 [info ] [MainThread]: Project loading failed for the following reason:
+ project path <C:\Users\meorh\Desktop\Data Science\Project\data-engineer\data-engineering-zoomcamp\week_4_analytics\dbt-core\dbt-core\dbt_project.yml> not found
+
+[0m23:28:31.573169 [debug] [MainThread]: Command `dbt debug` failed at 23:28:31.573169 after 3.04 seconds
+[0m23:28:31.573169 [debug] [MainThread]: Connection 'debug' was properly closed.
+[0m23:28:31.579938 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000182C6D69250>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000182CA694370>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000182CA653430>]}
+[0m23:28:31.581357 [debug] [MainThread]: Flushing usage events
